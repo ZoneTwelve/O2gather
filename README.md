@@ -19,11 +19,12 @@
 
 Make an server can handle request and respose
 Provide a virtual product with a special structure
-```json
+```rust
+// just make two value different
 { 
-  product_id: u32 
-  counter: i32
-} # just make two value different
+  "product_id": "u32"
+  "counter": "i32"
+} 
 ```
 
 ### Infrastructure
