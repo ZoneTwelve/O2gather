@@ -45,6 +45,12 @@ async fn buy_product(data: web::Data<StoreItem>) -> String {
   }
 }
 
+async fn reset_product(data: web::Data<StoreItem>) -> String {
+  let mut counter = data.counter.lock().unwrap();
+  *counter = 3;
+  String::from("Reset successfully")
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
   let mut rng = rand::thread_rng();
@@ -62,6 +68,7 @@ async fn main() -> std::io::Result<()> {
       .app_data(only_product.clone())
       .route("/product", web::get().to(get_product))
       .route("/buy/1", web::get().to(buy_product))
+      .route("/reset/1", web::get().to(reset_product))
   })
   .bind(("127.0.0.1", 8080))?
   .run()
