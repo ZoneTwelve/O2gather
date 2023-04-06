@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: rust-o2gether
+  name: backend-o2gether
 spec:
   containers:
-    - name: rust-o2gether
-      image: locally/rust-o2gether
+    - name: backend-o2gether
+      image: locally/o2gether-backend
       ports: 
       - containerPort: 8080
