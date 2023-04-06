@@ -73,3 +73,7 @@ Not Regular API Standard
   - [minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)
   - [padding external ip](https://stackoverflow.com/questions/44110876/kubernetes-service-external-ip-pending)
   - [kompose](https://kubernetes.io/zh-cn/docs/tasks/configure-pod-container/translate-compose-kubernetes/)
+  - [Rust Docker tutorial](https://tutorialedge.net/rust/rust-docker-tutorial/)
+  - [deployment the rust from offical image](https://www.docker.com/blog/simplify-your-deployments-using-the-rust-official-image/)
+  - [Rust image on dockerhub](https://hub.docker.com/_/rust/tags?page=2)
+  - [rust-web-starter](https://github.com/ghotiphud/rust-web-starter/blob/master/api_server/Dockerfile)
