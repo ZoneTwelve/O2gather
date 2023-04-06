@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
     - name: backend-o2gether
-      image: locally/o2gether-backend
+      image: o2gether-backend
       ports: 
       - containerPort: 8080

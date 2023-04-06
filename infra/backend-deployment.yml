@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: o2gether-backend-deployment
+  labels:
+    app: o2gether
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: o2gether
+  template:
+    metadata:
+      labels:
+        app: o2gether
+    spec:
+      containers:
+      - name: o2gether-backend
+        image: docker.io/locally/o2gether-backend:latest
+        ports:
+        - containerPort: 8080
