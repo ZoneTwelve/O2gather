@@ -1,39 +1,35 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script>	
+	import product_view from '$lib/images/product.png';
+	import Product from './Products.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Hotdog on sale</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
 <section>
 	<h1>
-		<span class="welcome">
+		<span class="the-product">
 			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
+				<img src={product_view} alt="The Hotest dog" />
+				<div class="description">
+					<small>Hotdog series</small>
+					<span class="h1">The hotdog</span>
+					<span class="text">The fastest dog we hot</span>
+				</div>
 			</picture>
 		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
 </section>
+
+<Product/>
 
 <style>
 	section {
 		display: flex;
-		flex-direction: column;
+		/* flex-direction: column; */
 		justify-content: center;
-		align-items: center;
+		/* align-items: center; */
 		flex: 0.6;
 	}
 
@@ -41,19 +37,35 @@
 		width: 100%;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
+	.the-product > picture > img {
 		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		max-width: 600px;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
+	.the-product > picture > div {
+		position: relative;
+		left: 10rem;
+		bottom: 50%;
+	}
+
+	.description > *{
+		line-height: 2rem;
 		display: block;
 	}
+
+	.description > small {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	.description > span {
+		font-size: 1rem;
+	}
+	.description > .h1 {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	.description > .text {
+		line-height: 4rem;
+	}
+
 </style>
