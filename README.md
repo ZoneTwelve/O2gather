@@ -36,6 +36,7 @@ Provide a virtual product with a special structure
 Not Regular API Standard
 - GET /product
 - GET /buy/1
+- GET /reset/1
 
 
 ### Infrastructure
@@ -77,3 +78,4 @@ Not Regular API Standard
   - [deployment the rust from offical image](https://www.docker.com/blog/simplify-your-deployments-using-the-rust-official-image/)
   - [Rust image on dockerhub](https://hub.docker.com/_/rust/tags?page=2)
   - [rust-web-starter](https://github.com/ghotiphud/rust-web-starter/blob/master/api_server/Dockerfile)
+  - [Deploy to kubernetes](https://docs.docker.com/get-started/kube-deploy/)
